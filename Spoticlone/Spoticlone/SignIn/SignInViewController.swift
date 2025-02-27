@@ -19,6 +19,11 @@ final class SignInViewController: UIViewController {
         super.viewDidLoad()
         customizeButtons()
     }
+    
+    @IBAction func didLogInButtonTapped() {
+        let logInController = LogInViewController()
+        navigationController?.pushViewController(logInController, animated: true)
+    }
 }
 
 extension SignInViewController {
