@@ -42,7 +42,7 @@ extension SignInViewController {
         
         var continueWithAppleConfiguration = UIButton.Configuration.bordered()
         continueWithAppleConfiguration.cornerStyle = .capsule
-        continueWithAppleConfiguration.background.strokeWidth = 1
+        continueWithAppleConfiguration.background.strokeWidth = 2
         continueWithAppleConfiguration.background.strokeColor = .spotigray
         continueWithAppleConfiguration.baseBackgroundColor = .spotiblack
         continueWithAppleConfiguration.image = UIImage(systemName: "apple.logo")

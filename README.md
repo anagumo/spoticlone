@@ -1,2 +1,18 @@
 # spoticlone
-Practica diaria de Fundamentos de iOS del Bootcamp de Desarrollo de Apps para iOS y Android con Inteligencia Artificial Generativa Aplicada.
+
+A basic music app inspired on the Spotify app 
+
+| SignIn | * |
+|--------|------|
+| <img src="Images/signin.png" width="250"/>  | <img src="" width="250"/> |
+
+## Concepts applied:
+
+* Position based on frames
+* Storyboard and XIBs
+* Autolayout y UIStackView
+* UIViewController lifecyle
+* Cocoa MVC
+* Human Interface Guidelines
+* NavigationController
+* TabBarController
