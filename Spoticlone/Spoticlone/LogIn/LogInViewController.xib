@@ -39,6 +39,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="udP-iX-d0H"/>
                                     </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" textContentType="username"/>
                                 </textField>
@@ -59,6 +60,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="TOz-C5-shK"/>
                                     </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 </textField>

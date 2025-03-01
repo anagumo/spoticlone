@@ -28,7 +28,7 @@ extension LogInViewController {
         
         var logInButtonConfiguration = UIButton.Configuration.filled()
         logInButtonConfiguration.cornerStyle = .capsule
-        logInButtonConfiguration.baseBackgroundColor = .spotigray
+        logInButtonConfiguration.baseBackgroundColor = .sGrayLight
         logInButtonConfiguration.contentInsets = NSDirectionalEdgeInsets(
             top: 10,
             leading: 20,
