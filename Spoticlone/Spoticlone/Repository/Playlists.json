@@ -1,0 +1,99 @@
+{
+    "playlists": [
+        {
+            "id": 1,
+            "name": "Top Hits 2023",
+            "description": "The hottest tracks of the year, updated weekly!",
+            "emoji": "🔥",
+            "color": "#FF4500",
+            "songs": [
+                { "title": "Flowers", "artist": "Miley Cyrus", "duration": "3:20" },
+                { "title": "As It Was", "artist": "Harry Styles", "duration": "2:47" },
+                { "title": "Anti-Hero", "artist": "Taylor Swift", "duration": "3:20" },
+                { "title": "Unholy", "artist": "Sam Smith ft. Kim Petras", "duration": "2:36" },
+                { "title": "Creepin'", "artist": "Metro Boomin, The Weeknd, 21 Savage", "duration": "3:41" },
+                { "title": "Kill Bill", "artist": "SZA", "duration": "2:33" },
+                { "title": "Calm Down", "artist": "Rema ft. Selena Gomez", "duration": "3:59" },
+                { "title": "Die For You", "artist": "The Weeknd", "duration": "4:20" },
+                { "title": "I'm Good (Blue)", "artist": "David Guetta ft. Bebe Rexha", "duration": "2:55" },
+                { "title": "Lavender Haze", "artist": "Taylor Swift", "duration": "3:22" }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Rock Classics",
+            "description": "Timeless rock anthems from legendary bands.",
+            "emoji": "🎸",
+            "color": "#8B4513",
+            "songs": [
+                { "title": "Bohemian Rhapsody", "artist": "Queen", "duration": "5:55" },
+                { "title": "Hotel California", "artist": "Eagles", "duration": "6:30" },
+                { "title": "Stairway to Heaven", "artist": "Led Zeppelin", "duration": "8:02" },
+                { "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration": "5:01" },
+                { "title": "Sweet Child O' Mine", "artist": "Guns N' Roses", "duration": "5:56" },
+                { "title": "Back in Black", "artist": "AC/DC", "duration": "4:15" },
+                { "title": "Another Brick in the Wall", "artist": "Pink Floyd", "duration": "3:59" },
+                { "title": "Paint It Black", "artist": "The Rolling Stones", "duration": "3:22" },
+                { "title": "Purple Haze", "artist": "Jimi Hendrix", "duration": "2:50" },
+                { "title": "Livin' on a Prayer", "artist": "Bon Jovi", "duration": "4:09" }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Chill Vibes",
+            "description": "Relaxing and soothing tunes for any mood.",
+            "emoji": "🌊",
+            "color": "#00BFFF",
+            "songs": [
+                { "title": "Sunflower", "artist": "Post Malone & Swae Lee", "duration": "2:38" },
+                { "title": "Lovely", "artist": "Billie Eilish & Khalid", "duration": "3:20" },
+                { "title": "Night Owl", "artist": "Galimatias", "duration": "4:10" },
+                { "title": "Best Part", "artist": "Daniel Caesar ft. H.E.R.", "duration": "3:29" },
+                { "title": "Location", "artist": "Khalid", "duration": "3:39" },
+                { "title": "Electric Feel", "artist": "MGMT", "duration": "3:49" },
+                { "title": "The Less I Know The Better", "artist": "Tame Impala", "duration": "3:36" },
+                { "title": "Sweater Weather", "artist": "The Neighbourhood", "duration": "4:00" },
+                { "title": "Coffee", "artist": "Beabadoobee", "duration": "2:06" },
+                { "title": "Talk", "artist": "Khalid", "duration": "3:17" }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Hip-Hop Bangers",
+            "description": "Hard-hitting beats and fire bars.",
+            "emoji": "🎤",
+            "color": "#FF1493",
+            "songs": [
+                { "title": "SICKO MODE", "artist": "Travis Scott", "duration": "5:12" },
+                { "title": "God's Plan", "artist": "Drake", "duration": "3:18" },
+                { "title": "HUMBLE.", "artist": "Kendrick Lamar", "duration": "2:57" },
+                { "title": "Mo Bamba", "artist": "Sheck Wes", "duration": "3:03" },
+                { "title": "Suge", "artist": "DaBaby", "duration": "2:43" },
+                { "title": "ROCKSTAR", "artist": "DaBaby ft. Roddy Ricch", "duration": "3:01" },
+                { "title": "Bad and Boujee", "artist": "Migos ft. Lil Uzi Vert", "duration": "5:43" },
+                { "title": "Money Trees", "artist": "Kendrick Lamar ft. Jay Rock", "duration": "6:26" },
+                { "title": "Going Bad", "artist": "Meek Mill ft. Drake", "duration": "3:00" },
+                { "title": "Mask Off", "artist": "Future", "duration": "3:24" }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Electronic Essentials",
+            "description": "The best electronic beats and festival anthems.",
+            "emoji": "⚡️",
+            "color": "#FFD700",
+            "songs": [
+                { "title": "Strobe", "artist": "deadmau5", "duration": "10:33" },
+                { "title": "Titanium", "artist": "David Guetta ft. Sia", "duration": "4:05" },
+                { "title": "Opus", "artist": "Eric Prydz", "duration": "9:03" },
+                { "title": "Wake Me Up", "artist": "Avicii", "duration": "4:09" },
+                { "title": "Lean On", "artist": "Major Lazer & DJ Snake ft. MØ", "duration": "2:56" },
+                { "title": "Animals", "artist": "Martin Garrix", "duration": "3:11" },
+                { "title": "Summer", "artist": "Calvin Harris", "duration": "3:42" },
+                { "title": "Don't You Worry Child", "artist": "Swedish House Mafia", "duration": "3:32" },
+                { "title": "Levels", "artist": "Avicii", "duration": "5:37" },
+                { "title": "Clarity", "artist": "Zedd ft. Foxes", "duration": "4:31" }
+            ]
+        }
+    ]
+}
