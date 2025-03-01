@@ -56,4 +56,10 @@ extension PlaylistsTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         90
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let playlist = playlists[indexPath.row]
+        let songsViewController = SongsTableViewController(playlist: playlist)
+        navigationController?.show(songsViewController, sender: self)
+    }
 }

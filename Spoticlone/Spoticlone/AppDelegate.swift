@@ -11,9 +11,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Set default color to all navigation bars inside all navigation controllers
+        // Set default colors for all navigation bars inside all navigation controllers
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().barTintColor = .spotiblack
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
         return true
     }
 
