@@ -8,7 +8,6 @@
 import UIKit
 
 final class SignInViewController: UIViewController {
-
     // MARK: UI Components
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var continueWithAppleButton: UIButton!
@@ -17,7 +16,7 @@ final class SignInViewController: UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        customizeButtons()
+        customizeUIComponents()
     }
     
     @IBAction func didLogInButtonTapped() {
@@ -28,7 +27,7 @@ final class SignInViewController: UIViewController {
 
 extension SignInViewController {
     /// UI components customization
-    private func customizeButtons() {
+    private func customizeUIComponents() {
         var signUpConfiguration = UIButton.Configuration.filled()
         signUpConfiguration.cornerStyle = .capsule
         signUpConfiguration.baseBackgroundColor = .spotigreen
