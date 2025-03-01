@@ -31,7 +31,16 @@ final class SearchCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureRightBarButtonItem()
         configureCollectionView()
+    }
+    
+    private func configureRightBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .play,
+            target: self,
+            action: #selector(playButtonTapped)
+        )
     }
     
     private func configureCollectionView() {
@@ -57,6 +66,16 @@ final class SearchCollectionViewController: UICollectionViewController {
         snapshot.appendItems(genres)
         // Apply the snapshot to the data source
         dataSource?.applySnapshotUsingReloadData(snapshot)
+    }
+    
+    // MARK: - Call to actions
+    /// This function receives the "Touch Up Inside" event when user taps the play button
+    /// - Discussion: Displays the data song in the player
+    @objc func playButtonTapped() {
+        // Set song as nil since the target is not from a specified song
+        let playerViewController = PlayerViewController(song: nil)
+        navigationController?.modalPresentationStyle = .popover
+        navigationController?.present(playerViewController, animated: true)
     }
 }
 

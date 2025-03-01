@@ -25,8 +25,10 @@ final class LogInViewController: UIViewController {
         mainTabBarController.tabBar.tintColor = .white
         mainTabBarController.tabBar.unselectedItemTintColor = .white
         mainTabBarController.tabBar.barTintColor = .spotiblack
+        
         let searchCollectionViewController = SearchCollectionViewController()
-        searchCollectionViewController.tabBarItem = UITabBarItem(
+        let searchNavigationController = UINavigationController(rootViewController: searchCollectionViewController)
+        searchNavigationController.tabBarItem = UITabBarItem(
             title: "Search",
             image: UIImage(systemName: "magnifyingglass"),
             selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
@@ -38,7 +40,7 @@ final class LogInViewController: UIViewController {
             image: UIImage(systemName: "list.bullet.rectangle.portrait"),
             selectedImage: UIImage(systemName: "list.bullet.rectangle.portrait.fill"))
         mainTabBarController.viewControllers = [
-            searchCollectionViewController,
+            searchNavigationController,
             playlistsNavigationController
         ]
         // Replace all controllers on the navigation stack
