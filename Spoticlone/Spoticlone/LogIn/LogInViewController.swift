@@ -18,6 +18,27 @@ final class LogInViewController: UIViewController {
         super.viewDidLoad()
         customizeUIComponents()
     }
+    
+    // MARK: - Call to actions
+    @IBAction func loginButtonTapped() {
+        let mainTabBarController = UITabBarController()
+        let searchCollectionViewController = SearchCollectionViewController()
+        searchCollectionViewController.tabBarItem = UITabBarItem(
+            title: "Search",
+            image: UIImage(systemName: "magnifyingglass"),
+            selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
+        let playlistViewController = UIViewController() // TODO: Replace by the final class
+        playlistViewController.tabBarItem = UITabBarItem(
+            title: "Playlists",
+            image: UIImage(systemName: "list.bullet.rectangle.portrait"),
+            selectedImage: UIImage(systemName: "list.bullet.rectangle.portrait.fill"))
+        mainTabBarController.viewControllers = [
+            searchCollectionViewController,
+            playlistViewController
+        ]
+        // Replace all controllers on the navigation stack
+        navigationController?.setViewControllers([mainTabBarController], animated: true)
+    }
 }
 
 extension LogInViewController {
