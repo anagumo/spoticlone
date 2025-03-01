@@ -116,6 +116,114 @@ enum PlaylistLocalRepository {
                 Song(title: "Levels", artist: "Avicii", duration: "5:37"),
                 Song(title: "Clarity", artist: "Zedd ft. Foxes", duration: "4:31")
             ]
+        ),
+        Playlist(
+            id: 6,
+            name: "Acoustic Mornings",
+            description: "Start your day with soft, acoustic melodies.",
+            emoji: "🌞",
+            color: "#FFA500",
+            songs: [
+                Song(title: "Banana Pancakes", artist: "Jack Johnson", duration: "3:12"),
+                Song(title: "Photograph", artist: "Ed Sheeran", duration: "4:19"),
+                Song(title: "Rivers and Roads", artist: "The Head and the Heart", duration: "4:44")
+            ]
+        ),
+        Playlist(
+            id: 7,
+            name: "90s Nostalgia",
+            description: "A throwback to the best hits of the 90s.",
+            emoji: "📼",
+            color: "#800080",
+            songs: [
+                Song(title: "Smells Like Teen Spirit", artist: "Nirvana", duration: "5:01"),
+                Song(title: "Wannabe", artist: "Spice Girls", duration: "2:53"),
+                Song(title: "I Want It That Way", artist: "Backstreet Boys", duration: "3:33")
+            ]
+        ),
+        Playlist(
+            id: 8,
+            name: "Workout Pump",
+            description: "High-energy tracks to keep you moving.",
+            emoji: "💪",
+            color: "#DC143C",
+            songs: [
+                Song(title: "Till I Collapse", artist: "Eminem", duration: "4:58"),
+                Song(title: "Stronger", artist: "Kanye West", duration: "5:12"),
+                Song(title: "Power", artist: "Kanye West", duration: "3:41")
+            ]
+        ),
+        Playlist(
+            id: 9,
+            name: "Indie Gems",
+            description: "Discover hidden gems from the indie scene.",
+            emoji: "🎨",
+            color: "#FF69B4",
+            songs: [
+                Song(title: "Take a Walk", artist: "Passion Pit", duration: "4:24"),
+                Song(title: "Dog Days Are Over", artist: "Florence + The Machine", duration: "4:12"),
+                Song(title: "Electric Feel", artist: "MGMT", duration: "3:49")
+            ]
+        ),
+        Playlist(
+            id: 10,
+            name: "Lofi Beats",
+            description: "Relax and focus with these chill beats.",
+            emoji: "☕️",
+            color: "#A0522D",
+            songs: [
+                Song(title: "Snowfall", artist: "ØDYSSEE", duration: "2:34"),
+                Song(title: "Morning Coffee", artist: "Lofi Fruits", duration: "2:47"),
+                Song(title: "Cozy Nights", artist: "Sleepy Fish", duration: "3:10")
+            ]
+        ),
+        Playlist(
+            id: 11,
+            name: "R&B Smooth",
+            description: "Sultry and soulful R&B classics.",
+            emoji: "💖",
+            color: "#FF69B4",
+            songs: [
+                Song(title: "Adorn", artist: "Miguel", duration: "3:13"),
+                Song(title: "No Guidance", artist: "Chris Brown ft. Drake", duration: "4:22"),
+                Song(title: "Earned It", artist: "The Weeknd", duration: "4:37")
+            ]
+        ),
+        Playlist(
+            id: 12,
+            name: "Jazz Essentials",
+            description: "A selection of classic jazz masterpieces.",
+            emoji: "🎷",
+            color: "#4B0082",
+            songs: [
+                Song(title: "Take Five", artist: "Dave Brubeck", duration: "5:24"),
+                Song(title: "So What", artist: "Miles Davis", duration: "9:22"),
+                Song(title: "Feeling Good", artist: "Nina Simone", duration: "2:55")
+            ]
+        ),
+        Playlist(
+            id: 13,
+            name: "Country Roads",
+            description: "Country hits for your next road trip.",
+            emoji: "🤠",
+            color: "#8B4513",
+            songs: [
+                Song(title: "Take Me Home, Country Roads", artist: "John Denver", duration: "3:10"),
+                Song(title: "Tennessee Whiskey", artist: "Chris Stapleton", duration: "4:53"),
+                Song(title: "Wagon Wheel", artist: "Darius Rucker", duration: "4:57")
+            ]
+        ),
+        Playlist(
+            id: 14,
+            name: "Classical Masterpieces",
+            description: "Relax and enjoy the greatest classical compositions.",
+            emoji: "🎻",
+            color: "#483D8B",
+            songs: [
+                Song(title: "Clair de Lune", artist: "Claude Debussy", duration: "5:09"),
+                Song(title: "Moonlight Sonata", artist: "Beethoven", duration: "6:55"),
+                Song(title: "The Four Seasons: Spring", artist: "Vivaldi", duration: "3:32")
+            ]
         )
     ]
 }

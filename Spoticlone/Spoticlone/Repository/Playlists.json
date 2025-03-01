@@ -94,6 +94,114 @@
                 { "title": "Levels", "artist": "Avicii", "duration": "5:37" },
                 { "title": "Clarity", "artist": "Zedd ft. Foxes", "duration": "4:31" }
             ]
+        },
+        {
+            "id": 6,
+            "title": "Acoustic Mornings",
+            "description": "Start your day with soft, acoustic melodies.",
+            "emoji": "🌞",
+            "color": "#FFA500",
+            "songs": [
+                { "title": "Banana Pancakes", "artist": "Jack Johnson", "duration": "3:12" },
+                { "title": "Photograph", "artist": "Ed Sheeran", "duration": "4:19" },
+                { "title": "Rivers and Roads", "artist": "The Head and the Heart", "duration": "4:44" }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "90s Nostalgia",
+            "description": "A throwback to the best hits of the 90s.",
+            "emoji": "📼",
+            "color": "#800080",
+            "songs": [
+                { "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration": "5:01" },
+                { "title": "Wannabe", "artist": "Spice Girls", "duration": "2:53" },
+                { "title": "I Want It That Way", "artist": "Backstreet Boys", "duration": "3:33" }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Workout Pump",
+            "description": "High-energy tracks to keep you moving.",
+            "emoji": "💪",
+            "color": "#DC143C",
+            "songs": [
+                { "title": "Till I Collapse", "artist": "Eminem", "duration": "4:58" },
+                { "title": "Stronger", "artist": "Kanye West", "duration": "5:12" },
+                { "title": "Power", "artist": "Kanye West", "duration": "3:41" }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Indie Gems",
+            "description": "Discover hidden gems from the indie scene.",
+            "emoji": "🎨",
+            "color": "#FF69B4",
+            "songs": [
+                { "title": "Take a Walk", "artist": "Passion Pit", "duration": "4:24" },
+                { "title": "Dog Days Are Over", "artist": "Florence + The Machine", "duration": "4:12" },
+                { "title": "Electric Feel", "artist": "MGMT", "duration": "3:49" }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Lofi Beats",
+            "description": "Relax and focus with these chill beats.",
+            "emoji": "☕️",
+            "color": "#A0522D",
+            "songs": [
+                { "title": "Snowfall", "artist": "ØDYSSEE", "duration": "2:34" },
+                { "title": "Morning Coffee", "artist": "Lofi Fruits", "duration": "2:47" },
+                { "title": "Cozy Nights", "artist": "Sleepy Fish", "duration": "3:10" }
+            ]
+        },
+        {
+            "id": 11,
+            "title": "R&B Smooth",
+            "description": "Sultry and soulful R&B classics.",
+            "emoji": "💖",
+            "color": "#FF69B4",
+            "songs": [
+                { "title": "Adorn", "artist": "Miguel", "duration": "3:13" },
+                { "title": "No Guidance", "artist": "Chris Brown ft. Drake", "duration": "4:22" },
+                { "title": "Earned It", "artist": "The Weeknd", "duration": "4:37" }
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Jazz Essentials",
+            "description": "A selection of classic jazz masterpieces.",
+            "emoji": "🎷",
+            "color": "#4B0082",
+            "songs": [
+                { "title": "Take Five", "artist": "Dave Brubeck", "duration": "5:24" },
+                { "title": "So What", "artist": "Miles Davis", "duration": "9:22" },
+                { "title": "Feeling Good", "artist": "Nina Simone", "duration": "2:55" }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Country Roads",
+            "description": "Country hits for your next road trip.",
+            "emoji": "🤠",
+            "color": "#8B4513",
+            "songs": [
+                { "title": "Take Me Home, Country Roads", "artist": "John Denver", "duration": "3:10" },
+                { "title": "Tennessee Whiskey", "artist": "Chris Stapleton", "duration": "4:53" },
+                { "title": "Wagon Wheel", "artist": "Darius Rucker", "duration": "4:57" }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "Classical Masterpieces",
+            "description": "Relax and enjoy the greatest classical compositions.",
+            "emoji": "🎻",
+            "color": "#483D8B",
+            "songs": [
+                { "title": "Clair de Lune", "artist": "Claude Debussy", "duration": "5:09" },
+                { "title": "Moonlight Sonata", "artist": "Beethoven", "duration": "6:55" },
+                { "title": "The Four Seasons: Spring", "artist": "Vivaldi", "duration": "3:32" }
+            ]
         }
     ]
 }

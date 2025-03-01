@@ -30,7 +30,7 @@ final class LogInViewController: UIViewController {
             title: "Search",
             image: UIImage(systemName: "magnifyingglass"),
             selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
-        let playlistViewController = UIViewController() // TODO: Replace by the final class
+        let playlistViewController = PlaylistsTableViewController()
         playlistViewController.tabBarItem = UITabBarItem(
             title: "Playlists",
             image: UIImage(systemName: "list.bullet.rectangle.portrait"),
