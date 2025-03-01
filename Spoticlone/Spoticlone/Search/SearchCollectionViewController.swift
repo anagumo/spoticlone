@@ -13,9 +13,10 @@ enum SearchSection {
 
 final class SearchCollectionViewController: UICollectionViewController {
     // MARK: - Datasource
-    typealias DataSource = UICollectionViewDiffableDataSource<SearchSection, String>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<SearchSection, String>
+    typealias DataSource = UICollectionViewDiffableDataSource<SearchSection, Genre>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<SearchSection, Genre>
     private var dataSource: DataSource?
+    private var genres = GenreLocalRepository.genres
     
     init() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -37,7 +38,7 @@ final class SearchCollectionViewController: UICollectionViewController {
         // Create a UINib from the XIB file
         let searchUINib = UINib(nibName: SearchCollectionViewCell.identifier, bundle: nil)
         // Register the search cell
-        let registration = UICollectionView.CellRegistration<SearchCollectionViewCell, String>(cellNib: searchUINib) { cell, indexPath, genre in
+        let registration = UICollectionView.CellRegistration<SearchCollectionViewCell, Genre>(cellNib: searchUINib) { cell, indexPath, genre in
             cell.configure(genre: genre)
         }
         // Create the data source
@@ -49,11 +50,24 @@ final class SearchCollectionViewController: UICollectionViewController {
         })
         // Set the data source to the collection
         collectionView.dataSource = dataSource
+        collectionView.backgroundColor = .spotiblack
         // Create a snapshot
         var snapshot = Snapshot()
         snapshot.appendSections([.search])
-        snapshot.appendItems(["Pop"])
+        snapshot.appendItems(genres)
         // Apply the snapshot to the data source
         dataSource?.applySnapshotUsingReloadData(snapshot)
+    }
+}
+
+// MARK: - Search View Controller Delegate
+extension SearchCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberCollumn: CGFloat = 2
+        let itemWidth = (collectionView.frame.size.width - 32) / numberCollumn
+        return CGSize(width: itemWidth, height: 110)
     }
 }

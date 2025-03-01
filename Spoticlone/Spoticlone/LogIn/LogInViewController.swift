@@ -22,6 +22,9 @@ final class LogInViewController: UIViewController {
     // MARK: - Call to actions
     @IBAction func loginButtonTapped() {
         let mainTabBarController = UITabBarController()
+        mainTabBarController.tabBar.tintColor = .white
+        mainTabBarController.tabBar.unselectedItemTintColor = .white
+        mainTabBarController.tabBar.barTintColor = .spotiblack
         let searchCollectionViewController = SearchCollectionViewController()
         searchCollectionViewController.tabBarItem = UITabBarItem(
             title: "Search",
@@ -44,9 +47,6 @@ final class LogInViewController: UIViewController {
 extension LogInViewController {
     /// UI Components customization
     func customizeUIComponents() {
-        // Change the navigation bar items color
-        navigationController?.navigationBar.tintColor = .white
-        
         var logInButtonConfiguration = UIButton.Configuration.filled()
         logInButtonConfiguration.cornerStyle = .capsule
         logInButtonConfiguration.baseBackgroundColor = .sGrayLight
