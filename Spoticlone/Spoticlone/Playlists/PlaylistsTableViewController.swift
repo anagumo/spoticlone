@@ -17,10 +17,20 @@ final class PlaylistsTableViewController: UITableViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<PlaylistSection, Playlist>
     private var dataSource: DataSource?
     private let playlists = PlaylistLocalRepository.playlists
-        
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureRightBarButtonItem()
         configureTableView()
+    }
+    
+    private func configureRightBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .play,
+            target: self,
+            action: #selector(playButtonTapped)
+        )
     }
     
     private func configureTableView() {
@@ -47,6 +57,16 @@ final class PlaylistsTableViewController: UITableViewController {
         snapshot.appendItems(playlists)
         // Apply the snapshot to the data source
         dataSource?.applySnapshotUsingReloadData(snapshot)
+    }
+    
+    // MARK: - Call to actions
+    /// This function receives the "Touch Up Inside" event when user taps the play button
+    /// - Discussion: Displays the data song in the player
+    @objc func playButtonTapped() {
+        // Set song as nil since the target is not from a specified song
+        let playerViewController = PlayerViewController(song: nil)
+        navigationController?.modalPresentationStyle = .popover
+        navigationController?.present(playerViewController, animated: true)
     }
 }
 

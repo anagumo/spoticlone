@@ -30,14 +30,16 @@ final class LogInViewController: UIViewController {
             title: "Search",
             image: UIImage(systemName: "magnifyingglass"),
             selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
-        let playlistViewController = PlaylistsTableViewController()
-        playlistViewController.tabBarItem = UITabBarItem(
+        
+        let playlistsViewController = PlaylistsTableViewController()
+        let playlistsNavigationController = UINavigationController(rootViewController: playlistsViewController)
+        playlistsNavigationController.tabBarItem = UITabBarItem(
             title: "Playlists",
             image: UIImage(systemName: "list.bullet.rectangle.portrait"),
             selectedImage: UIImage(systemName: "list.bullet.rectangle.portrait.fill"))
         mainTabBarController.viewControllers = [
             searchCollectionViewController,
-            playlistViewController
+            playlistsNavigationController
         ]
         // Replace all controllers on the navigation stack
         navigationController?.setViewControllers([mainTabBarController], animated: true)

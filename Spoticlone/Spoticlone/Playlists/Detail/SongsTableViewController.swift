@@ -64,4 +64,14 @@ extension SongsTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         90
     }
+    
+    // MARK: - Call to action
+    /// This function receives the "Touch Up Inside" event when user taps in a specifc song
+    /// - Discussion: Displays the data song in the player
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let song = playlist.songs[indexPath.row]
+        let playerViewController = PlayerViewController(song: song)
+        navigationController?.modalPresentationStyle = .popover
+        navigationController?.present(playerViewController, animated: true)
+    }
 }
