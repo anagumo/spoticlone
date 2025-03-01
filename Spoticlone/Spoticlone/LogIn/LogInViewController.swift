@@ -13,7 +13,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeUIComponents()
@@ -23,7 +23,7 @@ final class LogInViewController: UIViewController {
 extension LogInViewController {
     /// UI Components customization
     func customizeUIComponents() {
-        // Change the navigation items color
+        // Change the navigation bar items color
         navigationController?.navigationBar.tintColor = .white
         
         var logInButtonConfiguration = UIButton.Configuration.filled()

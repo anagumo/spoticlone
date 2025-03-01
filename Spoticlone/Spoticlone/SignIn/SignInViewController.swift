@@ -8,18 +8,19 @@
 import UIKit
 
 final class SignInViewController: UIViewController {
-    // MARK: UI Components
+    // MARK: - UI Components
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var continueWithAppleButton: UIButton!
     
-    
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeUIComponents()
     }
     
+    // MARK: - Call to actions
     @IBAction func didLogInButtonTapped() {
+        // TODO: Research about create an App class to handle dependencies
         let logInController = LogInViewController()
         navigationController?.pushViewController(logInController, animated: true)
     }

@@ -2,9 +2,9 @@
 
 A basic music app inspired on the Spotify app 
 
-| SignIn | * |
+| SignIn | Login |
 |--------|------|
-| <img src="Images/signin.png" width="250"/>  | <img src="" width="250"/> |
+| <img src="Images/signin.png" width="250"/>  | <img src="Images/login.png" width="250"/> |
 
 ## Concepts applied:
 
