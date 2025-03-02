@@ -9,5 +9,5 @@ import Foundation
 import OSLog
 
 extension Logger {
-    static let logger = Logger(subsystem: "Spoticlone", category: "Debug")
+    static let debug = Logger(subsystem: "Spoticlone", category: "Debug")
 }

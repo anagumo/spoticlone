@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 enum SearchSection {
     case search
@@ -17,6 +18,8 @@ final class SearchCollectionViewController: UICollectionViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<SearchSection, Genre>
     private var dataSource: DataSource?
     private var genres = GenreLocalRepository.genres
+    // MARK: - Search
+    private var searchController: UISearchController?
     
     init() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -32,6 +35,7 @@ final class SearchCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureRightBarButtonItem()
+        configureSearchController()
         configureCollectionView()
     }
     
@@ -41,6 +45,22 @@ final class SearchCollectionViewController: UICollectionViewController {
             target: self,
             action: #selector(playButtonTapped)
         )
+    }
+    
+    /// Configure a search bar to filter genres
+    private func configureSearchController() {
+        // Create the search controller and set this screen as search result container
+        searchController = UISearchController(searchResultsController: nil)
+        // Set the responsability to this controller of any text changes within search bar and update results
+        searchController?.searchResultsUpdater = self
+        // Set off the property that obscures the screen while searching
+        searchController?.obscuresBackgroundDuringPresentation = false
+        // Place search bar in the navigation bar since is not compatible do this from IB
+        navigationItem.searchController = searchController
+        // Dispaly the search bar always
+        navigationItem.hidesSearchBarWhenScrolling = false
+        // Hide the search bar when user navigates to another screen
+        definesPresentationContext = true
     }
     
     private func configureCollectionView() {
@@ -79,7 +99,7 @@ final class SearchCollectionViewController: UICollectionViewController {
     }
 }
 
-// MARK: - Search View Controller Delegate
+// MARK: - CollectionView Delegates
 extension SearchCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
@@ -88,5 +108,18 @@ extension SearchCollectionViewController: UICollectionViewDelegateFlowLayout {
         let numberCollumn: CGFloat = 2
         let itemWidth = (collectionView.frame.size.width - 32) / numberCollumn
         return CGSize(width: itemWidth, height: 110)
+    }
+}
+
+// MARK: Search Controller Delegates
+extension SearchCollectionViewController: UISearchResultsUpdating {
+    
+    /// Update search results based on the text entered in the search bar
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let inputText = searchController.searchBar.text, !inputText.isEmpty else {
+            Logger.debug.log("Search bar text is empty")
+            return
+        }
+        Logger.debug.log("\(inputText)")
     }
 }
