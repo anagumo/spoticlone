@@ -20,6 +20,7 @@ final class SearchCollectionViewController: UICollectionViewController {
     private var genres = GenreLocalRepository.genres
     // MARK: - Search
     private var searchController: UISearchController?
+    private var filteredGenres: [Genre] = []
     
     init() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -57,6 +58,8 @@ final class SearchCollectionViewController: UICollectionViewController {
         searchController?.obscuresBackgroundDuringPresentation = false
         // Place search bar in the navigation bar since is not compatible do this from IB
         navigationItem.searchController = searchController
+        // Changes the search bar text color to white, set after set the controller
+        searchController?.searchBar.searchTextField.textColor = .white
         // Dispaly the search bar always
         navigationItem.hidesSearchBarWhenScrolling = false
         // Hide the search bar when user navigates to another screen
@@ -120,6 +123,17 @@ extension SearchCollectionViewController: UISearchResultsUpdating {
             Logger.debug.log("Search bar text is empty")
             return
         }
-        Logger.debug.log("\(inputText)")
+        Logger.debug.log("Input text: \(inputText)")
+        
+        filterGenres(inputText: inputText)
+    }
+    
+    private func filterGenres(inputText: String) {
+        filteredGenres = genres.filter({ genre in
+            genre.name.contains(inputText)
+        })
+        
+        let genresFound = filteredGenres.compactMap { $0.name }
+        Logger.debug.log("Results: \(genresFound.debugDescription)")
     }
 }
