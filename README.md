@@ -2,11 +2,11 @@
 
 A basic music app inspired on the Spotify app 
 
-| SignIn | Login |
+| Login | Sections |
 |--------|------|
 | <img src="Images/login.gif" width="250"/>  | <img src="Images/tabs.gif" width="250"/> |
 
-| Sections | Player |
+| Player | Filtering |
 |--------|------|
 | <img src="Images/player.gif" width="250"/>  | <img src="Images/filtering.gif" width="250"/> |
 
