@@ -22,6 +22,7 @@ final class PlayerViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         guard let song else {
+            // If player is not open from a specific song, as default I set this data
             self.song = Song(title: "Four Sure - Dan Deacon Remix",
                              artist: "Future Islands, Dan Deacon",
                              duration: "3:19")
@@ -52,14 +53,16 @@ extension PlayerViewController {
         
         var addSongConfiguration = UIButton.Configuration.plain()
         addSongConfiguration.baseForegroundColor = .spotigreen
-        let checkmarkImageConfiguration = UIImage.SymbolConfiguration(pointSize: 24)
-        addSongConfiguration.image = UIImage(systemName: "checkmark.circle.fill", withConfiguration: checkmarkImageConfiguration)
+        addSongConfiguration.image = UIImage(
+            systemName: "checkmark.circle.fill",
+            withConfiguration: UIImage.SymbolConfiguration(pointSize: 24))
         addSongButton.configuration = addSongConfiguration
         
         var playConfiguration = UIButton.Configuration.plain()
         playConfiguration.baseBackgroundColor = .white
-        let playImageConfiguration = UIImage.SymbolConfiguration(pointSize: 50)
-        playConfiguration.image = UIImage(systemName: "play.circle.fill", withConfiguration: playImageConfiguration)
+        playConfiguration.image = UIImage(
+            systemName: "play.circle.fill",
+            withConfiguration: UIImage.SymbolConfiguration(pointSize: 50))
         playbutton.configuration = playConfiguration
     }
 }

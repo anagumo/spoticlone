@@ -50,7 +50,10 @@ extension SignInViewController {
         continueWithAppleConfiguration.background.strokeWidth = 2
         continueWithAppleConfiguration.background.strokeColor = .spotigray
         continueWithAppleConfiguration.baseBackgroundColor = .spotiblack
-        continueWithAppleConfiguration.image = UIImage(systemName: "apple.logo")
+        continueWithAppleConfiguration.image = UIImage(
+            systemName: "apple.logo",
+            withConfiguration: UIImage.SymbolConfiguration(weight: .bold)
+        )
         continueWithAppleConfiguration.imagePlacement = .leading
         continueWithAppleConfiguration.imagePadding = 16
         continueWithAppleConfiguration.baseForegroundColor = .white
