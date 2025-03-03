@@ -83,7 +83,11 @@ final class SearchCollectionViewController: UICollectionViewController {
         // Set the data source to the collection
         collectionView.dataSource = dataSource
         collectionView.backgroundColor = .spotiblack
-        // Create a snapshot
+        // Create snapshot
+        applySnapshot(genres)
+    }
+    
+    private func applySnapshot(_ genres: [Genre]) {
         var snapshot = Snapshot()
         snapshot.appendSections([.search])
         snapshot.appendItems(genres)
@@ -118,21 +122,28 @@ extension SearchCollectionViewController: UICollectionViewDelegateFlowLayout {
 extension SearchCollectionViewController: UISearchResultsUpdating {
     
     /// Update search results based on the text entered in the search bar
+    /// - Parameter searchController: a controller of type `(UISearchController)` that represent an instance of the search bar
     func updateSearchResults(for searchController: UISearchController) {
         guard let inputText = searchController.searchBar.text, !inputText.isEmpty else {
-            Logger.debug.log("Search bar text is empty")
+            Logger.debug.log("Search bar is empty")
+            // Restore the data source after clearing the search
+            applySnapshot(genres)
             return
         }
         Logger.debug.log("Input text: \(inputText)")
-        
+        // Filter and update the data source
         filterGenres(inputText: inputText)
+        applySnapshot(filteredGenres)
     }
     
+    /// Filter the genres array based on the search bar input
+    /// - Parameter inputText: a text of type `(String)` the data entered by the user in the search bar
     private func filterGenres(inputText: String) {
-        filteredGenres = genres.filter({ genre in
-            genre.name.contains(inputText)
+        filteredGenres = genres.filter({
+            $0.name
+                .lowercased()
+                .contains(inputText.lowercased()) // Lowercase version of the input to find "Funk" and "funk"
         })
-        
         let genresFound = filteredGenres.compactMap { $0.name }
         Logger.debug.log("Results: \(genresFound.debugDescription)")
     }
