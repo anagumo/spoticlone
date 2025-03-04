@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 enum SongsSection {
     case songs
@@ -69,7 +70,10 @@ extension SongsTableViewController {
     /// This function receives the "Touch Up Inside" event when user taps in a specifc song
     /// - Discussion: Displays the data song in the player
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let song = playlist.songs[indexPath.row]
+        guard let song = dataSource?.itemIdentifier(for: indexPath) else {
+            Logger.debug.error("Song not found")
+            return
+        }
         let playerViewController = PlayerViewController(song: song)
         navigationController?.modalPresentationStyle = .popover
         navigationController?.present(playerViewController, animated: true)
