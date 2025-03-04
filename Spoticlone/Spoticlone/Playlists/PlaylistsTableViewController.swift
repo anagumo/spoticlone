@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 enum PlaylistSection {
     case playlists
@@ -78,7 +79,10 @@ extension PlaylistsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playlist = playlists[indexPath.row]
+        guard let playlist = dataSource?.itemIdentifier(for: indexPath) else {
+            Logger.debug.error("Playlist not found")
+            return
+        }
         let songsViewController = SongsTableViewController(playlist: playlist)
         navigationController?.show(songsViewController, sender: self)
     }
